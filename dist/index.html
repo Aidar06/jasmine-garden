@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#a79d7d">
+  <meta name="description" content="Свадебное приглашение в винтажном ботаническом стиле">
+  <title>Свадебное приглашение</title>
+  <link rel="preload" href="assets/fonts/cormorant-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/hero-botanical.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+  <a class="skip-link" href="#invitationSection">Перейти к приглашению</a>
+
+  <div class="status-screen" id="statusScreen" role="status" aria-live="polite">
+    <div class="status-card">
+      <span class="status-flower">✦</span>
+      <p class="eyebrow" id="statusEyebrow">Свадебное приглашение</p>
+      <h1 id="statusTitle">Загружаем приглашение…</h1>
+      <button class="outline-button" id="retryButton" type="button" hidden>Попробовать снова</button>
+    </div>
+  </div>
+
+  <div class="site" id="site" hidden>
+    <main>
+      <section class="hero">
+        <div class="hero-shade"></div>
+        <div class="hero-plaque reveal">
+          <span class="hero-monogram" id="monogramLetters"></span>
+          <p class="plaque-small">Wedding day</p>
+          <h1 class="hero-names"><span id="groomName"></span><i>&amp;</i><span id="brideName"></span></h1>
+          <p class="hero-date" id="heroDate"></p>
+        </div>
+        <a class="scroll-cue" href="#invitationSection"><span data-ui="scroll">Листайте вниз</span><b>↓</b></a>
+      </section>
+
+      <section class="paper-section invitation" id="invitationSection">
+        <img class="floral-crown floral-crown--top" src="assets/images/floral-arch.png" alt="" aria-hidden="true">
+        <div class="arched-card arched-card--cream reveal">
+          <p class="eyebrow" data-ui="dearLabel">Для самых близких</p>
+          <h2 class="display-title" id="invitationTitle"></h2>
+          <span class="botanical-divider">❦</span>
+          <p class="body-copy preserve-lines" id="invitationText"></p>
+          <p class="script-signature" id="invitationSignature"></p>
+        </div>
+      </section>
+
+      <section class="paper-section date-section" id="dateSection">
+        <div class="section-number">01</div>
+        <div class="date-layout reveal">
+          <div class="date-copy">
+            <p class="eyebrow" data-ui="dateLabel">Сохраните эту дату</p>
+            <p class="date-number" id="dateDay"></p>
+            <h2 id="dateMonth"></h2>
+            <p class="date-year" id="dateYear"></p>
+            <p class="date-time" id="dateTime"></p>
+          </div>
+          <div class="calendar-card" aria-label="Календарь">
+            <div class="calendar-heading"><span id="calendarMonth"></span><b id="calendarYear"></b></div>
+            <div class="calendar-week" id="calendarWeek"></div>
+            <div class="calendar-days" id="calendarDays"></div>
+          </div>
+        </div>
+        <div class="countdown reveal" id="countdown" aria-live="polite">
+          <p class="eyebrow" data-ui="countdownTitle">До нашей свадьбы осталось</p>
+          <div class="countdown-grid">
+            <div><strong id="countdownDays">0</strong><span data-ui="days">дней</span></div>
+            <div><strong id="countdownHours">0</strong><span data-ui="hours">часов</span></div>
+            <div><strong id="countdownMinutes">0</strong><span data-ui="minutes">минут</span></div>
+            <div><strong id="countdownSeconds">0</strong><span data-ui="seconds">секунд</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="paper-section program" id="programSection">
+        <img class="program-floral program-floral--top" src="assets/images/program-flowers.png" alt="" aria-hidden="true">
+        <div class="program-arch reveal">
+          <p class="eyebrow" data-ui="programLabel">Этот особенный день</p>
+          <h2 class="display-title" data-ui="programTitle">Программа дня</h2>
+          <ol class="program-list" id="programList"></ol>
+        </div>
+        <img class="program-floral program-floral--bottom" src="assets/images/program-flowers.png" alt="" aria-hidden="true">
+      </section>
+
+      <section class="paper-section venue" id="venueSection">
+        <div class="venue-copy reveal">
+          <p class="eyebrow" data-ui="venueLabel">Место торжества</p>
+          <p class="venue-type" id="venueType"></p>
+          <h2 class="venue-name" id="venueName"></h2>
+          <span class="botanical-divider">❦</span>
+          <p class="venue-address" id="venueAddress"></p>
+          <div class="map-actions" id="mapActions">
+            <a class="outline-button" id="googleMap" target="_blank" rel="noopener noreferrer" hidden>Google Maps</a>
+            <a class="outline-button" id="twoGisMap" target="_blank" rel="noopener noreferrer" hidden>2ГИС</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="wish" id="wishSection" hidden>
+        <div class="wish-shade"></div>
+        <div class="arched-card arched-card--light reveal">
+          <p class="eyebrow" data-ui="wishLabel">С заботой о деталях</p>
+          <h2 class="display-title" id="wishTitle"></h2>
+          <span class="botanical-divider">❦</span>
+          <p class="body-copy preserve-lines" id="wishText"></p>
+        </div>
+      </section>
+
+      <section class="paper-section rsvp" id="rsvpSection" hidden>
+        <div class="rsvp-arch reveal">
+          <p class="eyebrow" data-ui="answerLabel">Ваш ответ</p>
+          <h2 class="display-title" data-ui="rsvpTitle">Будете ли вы с нами?</h2>
+          <p class="body-copy rsvp-lead" data-ui="rsvpLead">Пожалуйста, подтвердите своё присутствие.</p>
+          <form class="rsvp-form" id="rsvpForm" novalidate>
+            <label class="field">
+              <span data-ui="nameLabel">Ваше имя</span>
+              <input id="guestName" name="name" type="text" autocomplete="name" maxlength="120" required>
+            </label>
+            <fieldset class="attendance-field">
+              <legend data-ui="attendanceLabel">Вы сможете прийти?</legend>
+              <label><input type="radio" name="attendance" value="yes" required><span data-ui="attendanceYes">Да, с радостью</span></label>
+              <label><input type="radio" name="attendance" value="no" required><span data-ui="attendanceNo">К сожалению, не смогу</span></label>
+            </fieldset>
+            <div class="field" id="guestCountField">
+              <span id="guestCountLabel" data-ui="guestCount">Количество гостей</span>
+              <div class="guest-picker" id="guestCountPicker">
+                <input id="guestCount" name="guests_count" type="hidden" value="1">
+                <button class="guest-picker-toggle" id="guestCountButton" type="button" aria-labelledby="guestCountLabel guestCountValue" aria-haspopup="listbox" aria-expanded="false">
+                  <span id="guestCountValue">1</span><span aria-hidden="true">⌄</span>
+                </button>
+                <div class="guest-picker-options" id="guestCountOptions" role="listbox" aria-labelledby="guestCountLabel" hidden></div>
+              </div>
+            </div>
+            <label class="field" id="guestWishField">
+              <span data-ui="guestWish">Ваше пожелание</span>
+              <textarea id="guestWish" name="wish" rows="4" maxlength="600"></textarea>
+            </label>
+            <button class="submit-button" id="rsvpSubmit" type="submit" data-ui="submit">Подтвердить участие</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="eyebrow" data-ui="withLove">С любовью</p>
+      <p class="footer-names" id="footerNames"></p>
+      <p class="footer-date" id="footerDate"></p>
+      <span class="footer-flower">❦</span>
+    </footer>
+  </div>
+
+  <div class="language-switch" id="languageSwitch" hidden>
+    <div class="language-toggle" id="languageToggle">
+      <button class="language-current" id="languageCurrent" type="button" aria-expanded="false" aria-controls="languageOptions">RU</button>
+      <div class="language-options" id="languageOptions" aria-label="Выбор языка"></div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js?v=1"></script>
+</body>
+</html>
