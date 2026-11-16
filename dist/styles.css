@@ -6,7 +6,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:#8d886f}
 body{margin:0;color:var(--ink);font-family:var(--sans);background:#8d886f;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:-28px;z-index:-2;background:linear-gradient(rgba(87,82,63,.48),rgba(87,82,63,.48)),url('assets/images/hero-botanical.png') center/cover;filter:blur(7px) saturate(.7)}
+body::before{content:"";position:fixed;inset:-28px;z-index:-2;background:linear-gradient(rgba(87,82,63,.48),rgba(87,82,63,.48)),url('assets/images/hero-botanical.webp') center/cover;filter:blur(7px) saturate(.7)}
 button,input,textarea{font:inherit}
 button,a{-webkit-tap-highlight-color:transparent}
 [hidden]{display:none!important}
@@ -18,13 +18,13 @@ button,a{-webkit-tap-highlight-color:transparent}
 .preserve-lines{white-space:pre-line}
 .botanical-divider{display:block;margin:20px auto;color:#8d7f61;font:28px/1 var(--serif)}
 
-.status-screen{position:fixed;inset:0;z-index:999;display:grid;place-items:center;padding:24px;background:linear-gradient(rgba(60,63,42,.4),rgba(60,63,42,.64)),url('assets/images/hero-botanical.png') center/cover}
+.status-screen{position:fixed;inset:0;z-index:999;display:grid;place-items:center;padding:24px;background:linear-gradient(rgba(60,63,42,.4),rgba(60,63,42,.64)),url('assets/images/hero-botanical.webp') center/cover}
 .status-card{width:min(360px,100%);padding:54px 28px 46px;text-align:center;background:rgba(244,239,220,.94);border-radius:180px 180px 24px 24px;border:1px solid rgba(255,255,255,.5)}
 .status-card h1{margin:8px 0 24px;font:400 36px/1.05 var(--serif)}
 .status-flower{font-size:28px;color:var(--olive)}
 .status-card .outline-button{display:inline-flex}
 
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px 28px 58px;text-align:center;color:var(--white);background:url('assets/images/hero-botanical.png') center/cover}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px 28px 58px;text-align:center;color:var(--white);background:url('assets/images/hero-botanical.webp') center/cover}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(38,38,24,.28),rgba(41,39,26,.04) 40%,rgba(42,39,26,.38))}
 .hero-top{position:absolute;z-index:1;top:54px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:16px}
 .hero-kicker{margin:0;font:500 11px var(--sans);letter-spacing:.3em;text-transform:uppercase}
@@ -73,7 +73,7 @@ button,a{-webkit-tap-highlight-color:transparent}
 .venue-copy{text-align:center}.venue-type{margin:0 0 7px;font:500 9px var(--sans);letter-spacing:.2em;text-transform:uppercase}.venue-name{margin:0;font:400 52px/1 var(--serif)}.venue-address{margin:12px auto 0;max-width:300px;font:400 17px/1.45 var(--serif)}
 .map-actions{display:flex;justify-content:center;gap:9px;margin-top:26px}.outline-button{min-height:44px;padding:0 17px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #70664f;border-radius:100px;background:transparent;color:var(--ink);text-decoration:none;font-size:9px;font-weight:700;cursor:pointer}
 
-.wish{position:relative;min-height:760px;padding:138px 30px;display:grid;align-items:center;background:url('assets/images/hero-botanical.png') center/cover}
+.wish{position:relative;min-height:760px;padding:138px 30px;display:grid;align-items:center;background:url('assets/images/hero-botanical.webp') center/cover}
 .wish-shade{position:absolute;inset:0;background:rgba(67,65,45,.42)}
 .arched-card--light{padding:100px 30px 70px;background:rgba(244,239,220,.95);border-radius:190px 190px 24px 24px;border:1px solid rgba(255,255,255,.5)}
 

@@ -7,7 +7,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'd
 for (const file of ['index.html', 'styles.css', 'app.js', 'backend-adapter.js']) {
   assert(fs.statSync(path.join(root, file)).size > 100, `Missing or empty ${file}`);
 }
-for (const file of ['assets/images/hero-botanical.png', 'assets/images/floral-arch.png', 'assets/images/program-flowers.png']) {
+for (const file of ['assets/images/hero-botanical.webp', 'assets/images/floral-arch.webp', 'assets/images/program-flowers.webp']) {
   assert(fs.statSync(path.join(root, file)).size > 1000, `Missing ${file}`);
 }
 
